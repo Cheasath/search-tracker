@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Search Page</title>
+  <style>
+    body { font-family: Arial; background: #f4f7fb; text-align: center; padding-top: 100px; }
+    input { padding: 10px; width: 250px; margin-right: 10px; }
+    button { padding: 10px 20px; background: #003366; color: white; border: none; }
+    .message { margin-top: 20px; color: green; }
+  </style>
+</head>
+<body>
+  <h2>Search Something</h2>
+  <form method="POST">
+    <input type="text" name="query" placeholder="Type here..." required>
+    <button type="submit">Submit</button>
+  </form>
+  {% if message %}
+    <div class="message">{{ message }}</div>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Search Logs</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #f8f8f8; }
+    h2 { color: #003366; }
+    .log { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
+    .entry { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <h2>Search History</h2>
+  <div class="log">
+    {% if logs %}
+      {% for entry in logs %}
+        <div class="entry">{{ entry }}</div>
+      {% endfor %}
+    {% else %}
+      <p>No logs yet.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
